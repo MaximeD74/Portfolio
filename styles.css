@@ -586,7 +586,7 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: -50px;
+  margin-top: 50px;
 }
 #contact p {
   margin: 40px 0;
