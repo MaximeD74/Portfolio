@@ -1,0 +1,43 @@
+[
+    {
+        "nom": "HTML",
+        "image": "./design/icon/html.webp",
+        "alt": "HTML icon"
+    },
+    {
+        "nom": "CSS",
+        "image": "./design/icon/css.webp",
+        "alt": "CSS icon"
+    },
+    {
+            "nom": "GitHub",
+            "image": "./design/icon/github.webp",
+            "alt": "GitHub icon"
+    },
+    {
+          "nom": "SASS",
+          "image": "./design/icon/sass.webp",
+          "alt": "SASS icon"
+    },
+    {
+        "nom": "JavaScript",
+        "image": "./design/icon/javascript.webp",
+        "alt": "JavaScript icon"
+    },
+    {
+        "nom": "React",
+        "image": "./design/icon/react.webp",
+        "alt": "React icon"
+    },
+    {
+        "nom": "Redux",
+        "image": "./design/icon/redux.webp",
+        "alt": "Redux icon"
+    },
+    {
+        "nom": "Swagger",
+        "image": "./design/icon/swagger.webp",
+        "alt": "Swagger icon"
+    }
+  ]
+  

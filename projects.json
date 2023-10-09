@@ -1,0 +1,44 @@
+[
+    {
+        "title" : "Booki",
+        "description" : "Apprentissage des bases (HTML/CSS)",
+        "cover" : "./design/project/cover/booki.webp",
+        "url" : "https://github.com/MaximeD74/Booki",
+        "alt" : "Dortoir en bois"
+    },
+    {
+        "title" : "Oh My Food",
+        "description" : "Création d'animations",
+        "cover" : "./design/project/cover/ohmyfood.webp",
+        "url" : "https://maximed74.github.io/Oh-My-Food-Project/",
+        "alt" : "Plat de poisson et ses légumes"
+    },
+    {
+        "title" : "Sophie Bluel",
+        "description" : "Projet Javascript",
+        "cover" : "./design/project/cover/sophieBluel.webp",
+        "url" : "https://github.com/MaximeD74/Sophie-Bluel",
+        "alt" : "Portrait de Sophie Bluel"
+    },
+    {
+        "title" : "Kasa",
+        "description" : "Projet React",
+        "cover" : "./design/project/cover/kasa.webp",
+        "url" : "https://github.com/MaximeD74/kasa",
+        "alt" : "Appartement moderne"
+    },
+    {
+        "title" : "Nina Carducci",
+        "description" : "SEO",
+        "cover" : "./design/project/cover/nina.webp",
+        "url" : "https://maximed74.github.io/Site-portfolio-Nina-Carducci/",
+        "alt" : "Portrait de Nina Carducci"
+    },
+    {
+        "title" : "Argent Bank",
+        "description" : "Projet redux",
+        "cover" : "./design/project/cover/argentBank.webp",
+        "url" : "https://github.com/MaximeD74/argent-bank",
+        "alt" : "Plante dans un verre rempli de pièces de monnaie"
+    }
+]
