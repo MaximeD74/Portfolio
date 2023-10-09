@@ -705,10 +705,12 @@ footer {
   }
   .footer-icon {
     position: absolute;
+    right: calc(50% - 86.5px);
+    bottom: 150%;
     
     a {
       background-color: black;
-      padding: 5px 5px;
+      padding: 2px 2px;
       border: none;
       border-radius: 5px;
       border: #000 2px solid;
@@ -718,19 +720,5 @@ footer {
         color: #FFF;
       }
     }
-  }
-}
-
-
-@media (max-width: 600px) {
-  .footer-icon {
-    right: 5%;
-    bottom: 150%;
-  }
-}
-@media (min-width: 601px) {
-  .footer-icon {
-    right: 5%;
-    bottom: 40%;
   }
 }

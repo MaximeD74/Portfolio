@@ -632,10 +632,12 @@ footer p {
 }
 footer .footer-icon {
   position: absolute;
+  right: calc(50% - 86.5px);
+  bottom: 150%;
 }
 footer .footer-icon a {
   background-color: black;
-  padding: 5px 5px;
+  padding: 2px 2px;
   border: none;
   border-radius: 5px;
   border: #000 2px solid;
@@ -644,19 +646,6 @@ footer .footer-icon a {
 }
 footer .footer-icon a:hover {
   color: #FFF;
-}
-
-@media (max-width: 600px) {
-  .footer-icon {
-    right: 5%;
-    bottom: 150%;
-  }
-}
-@media (min-width: 601px) {
-  .footer-icon {
-    right: 5%;
-    bottom: 40%;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
