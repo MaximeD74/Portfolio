@@ -14,6 +14,7 @@ html {
 body {
   font-family: "Playfair Display";
   background-color: rgba(0, 0, 0, 0.959);
+  
   overflow-x: hidden;
   width: 100%;
   display: flex;
@@ -45,25 +46,37 @@ a {
 
 /* Liens */
 
+
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #888783;
+  background-image: url("./design/img/roche.jpg");
+  background-size:cover;
   padding: 30px 0;
   transition: opacity 0.3s ease;
   border-bottom: 2px solid black;
   z-index: 4;
   opacity: 0;
 
+  .navGradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 5;
+    margin-top: -30px;
+  }
   &.visible {
     opacity: 1;
     transition: opacity 0.3s ease;
   }
   
   a {
-    color: #000;
+    color: #FFF;
     text-decoration: none;
+    font-weight: bold;
+    z-index: 6;
     &:hover {
       color: #FFF;
     }
@@ -107,7 +120,7 @@ nav {
 /* En-tête */
 
 .header-container {
-    background-image: url("./design/img/banner.jpg");
+    background-image: url("./design/img/banner.webp");
     background-size:cover;
     background-position: center;
     background-color: black;
@@ -195,7 +208,8 @@ section:target {
   
 section {
     text-align: center;
-    background: transparent;
+    
+    
    overflow: hidden;
     h2 {
       
@@ -214,7 +228,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px 0;
+  padding: 100px 0;
   width: 100%;
   background-color: #e5e7eb;
   color: black;
@@ -299,7 +313,7 @@ section {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    bottom: 0%;
+    bottom: 5%;
     
     .icon {
       font-size: 24px;
@@ -357,13 +371,30 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding-bottom: 100px;
+  background-image: url("./design/img/roche.jpg");
+  background-size:cover;
+  position: relative;
+
+  .skillGradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 2;
+  }
   
   h2 {
     margin-bottom: 50px;
     color: #fff;
+    z-index: 3;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 2);
   }
   img {
     width: 80px;
+    z-index: 3;
+    transition: transform 0.3s ease-in-out;
   }
 
   .skillsContainer {
@@ -375,6 +406,7 @@ section {
     opacity: 0;
      transform: translatex(300px);
     transition: all 1s ease-in-out;
+    z-index: 3;
   }
   .activeSkills {
     opacity: 1;
@@ -383,12 +415,11 @@ section {
 }
 
 .skill {
-  background-color: #FFF;
+  background-color:#FFF;
   padding: 10px ;
-  border: 2px solid grey;
   border-radius: 10px;
-  transition: transform 0.3s ease;
-
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
   p {
     font-size: 16px;
     margin-top: 5px;
@@ -397,6 +428,11 @@ section {
 
   &:hover {
     transform: scale(1.05);
+    box-shadow: 10.5px 10.5px 5px rgba(0, 0, 0, 0.6);
+
+    img {
+      transform: scale(1.05);
+    }
   }
 }
 @media (max-width: 1920px) {
@@ -420,15 +456,14 @@ section {
 /* Portfolio */
 
 #portfolio {
-  background-color: #e5e7eb;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 100px;
 
   h2 {
     margin-top: 50px;
     margin-bottom: 50px;
+    color: white;
   }
 
   .projectsContainer {
@@ -456,7 +491,6 @@ section {
     transition: transform 0.3s ease-in-out;
     background-color: black;
     
-    
     &:hover {
       transform: scale(1.05);
     }
@@ -467,8 +501,7 @@ section {
       height: 100%;
       background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
       z-index: 2;
-      
-  }
+    }
 
     h3 {
       position: absolute;
@@ -532,7 +565,7 @@ section {
     left: 50%;
     width: 80%;
     height: 2px;
-    background-color: black; 
+    background-color: #FFF; 
   }
   
 }
@@ -565,8 +598,19 @@ section {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  color: #FFF;
+  padding: 0 20px;
+  width: 100%;
 
+  .contactIcons {
+    background-color: #e5e7eb;
+    padding: 0 20px;
+  }
+  .contactForm {
+    color: #FFF;
+    p {
+      margin-top: 50px;
+    }
+  }
   p {
     margin-bottom: 20px;
   }
@@ -577,31 +621,30 @@ section {
     align-items: center;
     gap: 10px;
     margin-bottom: 50px;
-
+    
     i {
       color: black;
     }
     a {
-      background-color: #888783;
+      background-color: #FFF;
       border-radius: 5px;
       color: black;
       transition: transform 100ms ease-in-out;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
       cursor: pointer;
       &:hover {
-        color: #FFF;
         transform: scale(1.1);
-        i {
-          color: #FFF;
-        }
       }
     }
   }
 }
+@media (max-width: 600px) {
+  .contactIcons h2 {
+    font-size: 24px;
+  }
+}
 
 @media (max-width: 500px) {
-  #contact {
-    width: 100%;
-  }
   .footer-icon a {
     padding: 5px 5px;
     font-size: 10px;
@@ -609,9 +652,6 @@ section {
 }
 
 @media (min-width: 501px) {
-  #contact {
-    width: 80%;
-  }
   .footer-icon a {
     padding: 10px 10px;
     font-size: 14px;
@@ -643,7 +683,7 @@ section {
 /* Pied de page */
 
 footer {
-  background-color: #888783;
+  background-color: transparent;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -652,8 +692,22 @@ footer {
   width: 100%;
   position: relative;
   height: 100px;
-  p {
-      color: black;
+  border-top: 1px solid #FFF;
+  .footer-text{
+    p {
+      z-index: 6;
+        color: #FFF;
+    }
+    
+  }
+  .footerGradient {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 5;
   }
   
 }
