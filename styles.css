@@ -7,6 +7,10 @@
 }
 
 /* Styles globaux */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Playfair Display";
   background-color: rgba(0, 0, 0, 0.959);
@@ -110,21 +114,15 @@ h1 {
 
 .typing-animation {
   width: 22ch;
-  animation: typing 2s steps(22), blink 0.5s step-end infinite alternate;
+  animation: typing 2s steps(22);
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid;
   font-family: monospace;
 }
 
 @keyframes typing {
   from {
     width: 0;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
   }
 }
 .title {
@@ -157,9 +155,8 @@ h1 {
   font-family: "Playfair Display";
   font-size: 36px;
 }
-.header-description p {
-  animation: simpleBlink 0.8s infinite;
-  transition-delay: 2.2s;
+.header-description img {
+  animation: simpleBlink 1s infinite;
 }
 
 @keyframes simpleBlink {
@@ -179,10 +176,31 @@ h1 {
 @media (min-width: 1200px) {
   .title {
     left: 13%;
-    top: 20%;
   }
   .header-container {
     height: 100vh;
+  }
+  .title img {
+    width: 30px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 900px) and (max-width: 1200px) {
+  .title img {
+    width: 30px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  .title img {
+    width: 15px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .title img {
+    width: 10px;
+    margin-top: 5px;
   }
 }
 @media (min-width: 1101px) and (max-width: 1200px) {
@@ -197,7 +215,7 @@ h1 {
 }
 @media (min-width: 900px) {
   .title {
-    top: 20%;
+    top: 18%;
     gap: 40px;
   }
   .header-description {
@@ -233,7 +251,7 @@ h1 {
 }
 @media (min-width: 350px) and (max-width: 500px) {
   .title {
-    left: 15%;
+    left: 14%;
     top: 10%;
     gap: 20px;
   }
@@ -284,7 +302,10 @@ section h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 50px;
+  margin: 50px 0;
+}
+#about h2 {
+  margin: 0;
 }
 #about .about-container {
   display: flex;
@@ -301,12 +322,16 @@ section h2 {
   height: 2px;
   background-color: #fff;
 }
+#about .about-container h3 {
+  margin-bottom: 20px;
+}
 #about .card {
   max-width: 250px;
   min-width: 250px;
   position: relative;
   border-radius: 15px;
-  background-image: url("./design/img/portrait.webp");
+  background-color: rgba(169, 169, 169, 0.075);
+  background-image: url("./design/img/ski.webp");
   background-size: 250px;
   background-repeat: no-repeat;
   background-position: left;
@@ -315,7 +340,13 @@ section h2 {
   overflow: hidden;
 }
 #about div.card:hover {
-  background-size: 300px;
+  background-image: url("./design/img/code.webp");
+}
+#about .touch {
+  width: 50px;
+  position: absolute;
+  bottom: 8%;
+  left: calc(60% - 50px);
 }
 #about .name {
   color: #e4e4e4;
@@ -327,18 +358,30 @@ section h2 {
 #about div.card:hover .name {
   opacity: 1;
 }
+#about div.card:hover .touch {
+  opacity: 0;
+}
 #about div.card:hover .icons {
   opacity: 1;
 }
 #about div.card .icons {
-  text-align: center;
   position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #e4e4e4;
   text-shadow: 1px 1px 0px black, 2px 2px 0px black, 3px 3px 0px black;
   opacity: 0;
   transition: 1000ms;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  top: 90%;
+}
+#about div.card .icons img {
+  background-color: white;
+  border-radius: 50%;
+}
+#about div.card .icons .linkedIn {
+  margin-top: 10px;
 }
 #about div.card .icons .icon:hover {
   transform: scale(1.3);
@@ -362,6 +405,9 @@ section h2 {
   }
   .card {
     height: 200px;
+  }
+  .card .icons {
+    bottom: 80%;
   }
 }
 @media (min-width: 901px) {
@@ -614,16 +660,16 @@ footer p {
 }
 footer .footer-icon {
   position: absolute;
-  right: calc(50% - 86.5px);
+  right: calc(50% - 189.5px);
   bottom: 150%;
 }
 footer .footer-icon a {
   background-color: black;
-  padding: 2px 2px;
+  padding: 10px 10px;
   border: none;
   border-radius: 5px;
   border: #000 2px solid;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
 }
 footer .footer-icon a:hover {
