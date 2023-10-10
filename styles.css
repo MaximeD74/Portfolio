@@ -346,7 +346,7 @@ section h2 {
 #about .touch {
   width: 50px;
   position: absolute;
-  bottom: 8%;
+  bottom: 5%;
   left: calc(60% - 50px);
 }
 #about .name {
@@ -375,7 +375,10 @@ section h2 {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  top: 91%;
+  bottom: 0%;
+}
+#about div.card .icons .icon {
+  font-size: 24px;
 }
 #about div.card .icons img {
   background-color: white;
