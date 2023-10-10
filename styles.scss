@@ -5,8 +5,6 @@
 * {
   margin: 0;
   padding: 0;
-  color: #FFF;
-  
 }
 
 /* Styles globaux */
@@ -16,7 +14,7 @@ html {
 body {
   font-family: "Playfair Display";
   background-color: rgba(0, 0, 0, 0.959);
-  overflow-x:hidden ;
+  overflow-x: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -51,12 +49,12 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #aa906f;
-  z-index: 4;
-  opacity: 0;
+  background-color: #888783;
   padding: 30px 0;
   transition: opacity 0.3s ease;
   border-bottom: 2px solid black;
+  z-index: 4;
+  opacity: 0;
 
   &.visible {
     opacity: 1;
@@ -109,23 +107,51 @@ nav {
 /* En-tête */
 
 .header-container {
-    background-image: url("./design/img/banner.webp");
+    background-image: url("./design/img/banner.jpg");
     background-size:cover;
     background-position: center;
     background-color: black;
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    text-align: center;
     overflow: hidden;
     position: relative;
+
+    h1 {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      color: #fff;
+    }
+    h2 {
+      position: absolute;
+      color: #fff;
+      left: 5%;
+    }
+    img {
+      animation: simpleBlink 1.2s infinite;
+      width: 50px;
+      position: absolute;
+      bottom: 10%;
+      left: calc(50% - 25px);
+    }
+   
 }
 
+@media (max-width: 900px) {
+  .header-container {
+    height: 50vh;
+  }
+  h2 {
+    top: 17%;
+  }
+}
 
-h1 {
-    color: black;
-    padding-top: 10vh;
+@media (min-width: 901px) {
+  .header-container {
+    height: 100vh;
+  }
+  h2 {
+    top: 10%;
+  }
 }
 
 .typing-animation {
@@ -143,43 +169,6 @@ h1 {
   }
 }
 
-.title {
-  position: absolute;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  
-  h1 {
-    color: #FFF;
-  }
-}
-
-.header-name {
-  font-family: "EB Garamond", sans-serif;
-  color: black;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-.header-description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-
-  h2 {
-    font-family: "Playfair Display";
-    font-size: 36px;
-  }
-  img {
-    animation: simpleBlink 1.2s infinite;
-  }
-
-}
 @keyframes simpleBlink {
   0% {
     opacity: 1
@@ -194,121 +183,6 @@ h1 {
     opacity: 0
   }
 }
-  
-@media (min-width: 1200px) {
-  .title {
-    left: 13%;
-  }
-  .header-container {
-    height: 100vh;
-  }
-  .title img {
-    width: 30px;
-    margin-top: 5px;
-  }
-}
-@media (min-width: 900px) and (max-width: 1200px) {
-  .title img {
-    width: 30px;
-    margin-top: 5px;
-  }
-}
-@media (min-width: 600px) and (max-width: 900px) {
-  .title img {
-    width: 15px;
-    margin-top: 5px;
-  }
-}
-
-@media (max-width: 600px) {
-  .title img {
-    width: 10px;
-    margin-top: 5px;
-  }
-}
-
-@media (min-width: 1101px) and (max-width: 1200px) {
-  .title {
-    left: 14%;
-  }
-}
-
-@media (min-width: 901px) and (max-width: 1100px) {
-  .title {
-    left: 15%;
-  }
-}
-
-@media (min-width: 900px) {
-  .title {
-    top: 18%;
-    gap: 40px;
-  }
-  .header-description {
-    gap: 20px;
-    h2 {
-      font-size: 36px;
-    }
-  }
-  .header-name {
-    font-size: 74px;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 900px) {
-  .title {
-    left: 13%;
-    top: 12%;
-    gap: 20px;
-  }
-}
-
-@media (min-width: 350px) and (max-width: 900px) {
-  .header-container {
-    height: 50vh;
-  }
-  .header-description {
-    h2 {
-      font-size: 12px;
-    }
-  }
-  .header-name {
-    font-size: 24px;
-  }
-}
-
-@media (min-width: 350px) and (max-width: 500px) {
-  .title {
-    left: 14%;
-    top: 10%;
-    gap: 20px;
-  }
-}
-
-@media (min-width: 1px) and (max-width: 349px) {
-  .header-container {
-    height: 30vh;
-  }
-  .title {
-    left: 15%;
-    top: -1%;
-    gap: 5px;
-  }
-  .header-description {
-    h2 {
-      font-size: 12px;
-    }
-  }
-  .header-name {
-    font-size: 24px;
-  }
-  p {
-    font-size: 10px;
-  }
-}
-
-
-
 
 
 /* Sections */
@@ -340,7 +214,10 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 50px 0;
+  padding: 50px 0;
+  width: 100%;
+  background-color: #e5e7eb;
+  color: black;
 
   h2 {
     margin: 0;
@@ -483,6 +360,7 @@ section {
   
   h2 {
     margin-bottom: 50px;
+    color: #fff;
   }
   img {
     width: 80px;
@@ -494,7 +372,6 @@ section {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-
     opacity: 0;
      transform: translatex(300px);
     transition: all 1s ease-in-out;
@@ -543,14 +420,11 @@ section {
 /* Portfolio */
 
 #portfolio {
-  background-color: #aa906f;
+  background-color: #e5e7eb;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
-
-  
-
 
   h2 {
     margin-top: 50px;
@@ -622,24 +496,10 @@ section {
       object-fit: cover;
     }
   
-    a {
-      background-color: #aa906f;
-      padding: 8px 16px;
-      border-radius: 5px;
-      font-weight: bold;
-      color: black;
-      z-index: 2;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      &:hover {
-        color: #FFF;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-      }
-    }
+  
+    
   }
 }
-
-
-
 
 @media (min-width: 901px) {
   .project {
@@ -705,6 +565,7 @@ section {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
+  color: #FFF;
 
   p {
     margin-bottom: 20px;
@@ -716,16 +577,21 @@ section {
     align-items: center;
     gap: 10px;
     margin-bottom: 50px;
-    a {
-      background-color: #aa906f;
-      border-radius: 5px;
-      
+
+    i {
       color: black;
+    }
+    a {
+      background-color: #888783;
+      border-radius: 5px;
+      color: black;
+      transition: transform 100ms ease-in-out;
       cursor: pointer;
       &:hover {
         color: #FFF;
+        transform: scale(1.1);
         i {
-          color: black;
+          color: #FFF;
         }
       }
     }
@@ -777,7 +643,7 @@ section {
 /* Pied de page */
 
 footer {
-  background-color: #aa906f;
+  background-color: #888783;
   text-align: center;
   display: flex;
   flex-direction: row;
