@@ -76,12 +76,26 @@ nav {
       justify-content: center;
       margin: 0;
       padding: 0;
+      
     }
   }
 }
-@media (min-width: 510px) {
+@media (min-width: 600px) {
   a {
     font-size: 18px;
+  }
+  ul {
+    gap: 30px;
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  li {
+    width: 25%;
+  }
+  a {
+    font-size: 12px;
   }
 }
 
@@ -183,8 +197,6 @@ h1 {
   }
 }
   
-
-/* Media query en dehors des sélecteurs */
 @media (min-width: 1200px) {
   .title {
     left: 13%;
@@ -228,7 +240,7 @@ h1 {
 @media (min-width: 500px) and (max-width: 900px) {
   .title {
     left: 13%;
-    top: 7%;
+    top: 12%;
     gap: 20px;
   }
 }
@@ -237,17 +249,24 @@ h1 {
   .header-container {
     height: 50vh;
   }
-  
   .header-description {
     h2 {
-      font-size: 18px;
+      font-size: 12px;
     }
   }
   .header-name {
-    font-size: 36px;
+    font-size: 24px;
   }
   p {
-    font-size: 12px;
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 500px) {
+  .title {
+    left: 15%;
+    top: 10%;
+    gap: 20px;
   }
 }
 
@@ -274,13 +293,7 @@ h1 {
 }
 
 
-@media (min-width: 350px) and (max-width: 500px) {
-  .title {
-    left: 16%;
-    top: 5%;
-    gap: 20px;
-  }
-}
+
 
 
 /* Sections */
