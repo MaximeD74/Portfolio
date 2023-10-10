@@ -4,7 +4,6 @@
   margin: 0;
   padding: 0;
   color: #FFF;
-  box-sizing: border-box;
 }
 
 /* Styles globaux */
@@ -12,6 +11,7 @@ body {
   font-family: "Playfair Display";
   background-color: rgba(0, 0, 0, 0.959);
   overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -42,7 +42,6 @@ nav {
   background-color: #aa906f;
   z-index: 4;
   opacity: 0;
-  overflow: hidden;
   padding: 30px 0;
   transition: opacity 0.3s ease;
   border-bottom: 2px solid black;
@@ -59,10 +58,9 @@ nav a:hover {
   color: #FFF;
 }
 nav ul {
-  padding: 0;
+  position: relative;
   display: flex;
   justify-content: flex-end;
-  gap: 20px;
   list-style: none;
 }
 nav ul li {
@@ -78,33 +76,6 @@ nav ul li {
     font-size: 18px;
   }
 }
-@media (min-width: 440px) {
-  ul {
-    margin: 0 20px 0 0;
-  }
-  a {
-    font-size: 16px;
-  }
-}
-@media (max-width: 440px) {
-  ul {
-    justify-content: space-between;
-    gap: 5px;
-    margin: 0;
-    margin-left: 10px;
-  }
-  li {
-    width: 25%;
-  }
-  a {
-    font-size: 14px;
-  }
-}
-@media (max-width: 350px) {
-  a {
-    font-size: 12px;
-  }
-}
 /* En-tête */
 .header-container {
   background-image: url("./design/img/banner.webp");
@@ -117,6 +88,7 @@ nav ul li {
   padding: 0;
   text-align: center;
   overflow: hidden;
+  position: relative;
 }
 
 h1 {
@@ -202,6 +174,16 @@ h1 {
     height: 100vh;
   }
 }
+@media (min-width: 1101px) and (max-width: 1200px) {
+  .title {
+    left: 14%;
+  }
+}
+@media (min-width: 901px) and (max-width: 1100px) {
+  .title {
+    left: 15%;
+  }
+}
 @media (min-width: 900px) {
   .title {
     top: 20%;
@@ -217,19 +199,25 @@ h1 {
     font-size: 74px;
   }
 }
-@media (min-width: 901px) and (max-width: 1100px) {
+@media (min-width: 500px) and (max-width: 900px) {
   .title {
-    left: 15%;
-  }
-}
-@media (min-width: 1101px) and (max-width: 1200px) {
-  .title {
-    left: 14%;
+    left: 13%;
+    top: 7%;
+    gap: 20px;
   }
 }
 @media (min-width: 350px) and (max-width: 900px) {
   .header-container {
     height: 50vh;
+  }
+  .header-description h2 {
+    font-size: 18px;
+  }
+  .header-name {
+    font-size: 36px;
+  }
+  p {
+    font-size: 12px;
   }
 }
 @media (min-width: 1px) and (max-width: 349px) {
@@ -251,24 +239,6 @@ h1 {
     font-size: 10px;
   }
 }
-@media (min-width: 350px) and (max-width: 900px) {
-  .header-description h2 {
-    font-size: 18px;
-  }
-  .header-name {
-    font-size: 36px;
-  }
-  p {
-    font-size: 12px;
-  }
-}
-@media (min-width: 500px) and (max-width: 900px) {
-  .title {
-    left: 13%;
-    top: 5%;
-    gap: 20px;
-  }
-}
 @media (min-width: 350px) and (max-width: 500px) {
   .title {
     left: 16%;
@@ -286,6 +256,7 @@ section:target {
 section {
   text-align: center;
   background: transparent;
+  overflow: hidden;
 }
 section h2 {
   margin-top: 50px;
