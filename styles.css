@@ -16,6 +16,10 @@ body {
   background-color: rgba(0, 0, 0, 0.959);
   overflow-x: hidden;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -156,7 +160,7 @@ h1 {
   font-size: 36px;
 }
 .header-description img {
-  animation: simpleBlink 1s infinite;
+  animation: simpleBlink 1.2s infinite;
 }
 
 @keyframes simpleBlink {
@@ -244,9 +248,6 @@ h1 {
   }
   .header-name {
     font-size: 24px;
-  }
-  p {
-    font-size: 8px;
   }
 }
 @media (min-width: 350px) and (max-width: 500px) {
@@ -374,7 +375,7 @@ section h2 {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  top: 90%;
+  top: 91%;
 }
 #about div.card .icons img {
   background-color: white;
@@ -614,17 +615,52 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  justify-content: center;
+  margin-top: 30px;
 }
 #contact p {
-  margin: 40px 0;
+  margin-bottom: 20px;
 }
-#contact a {
-  font-size: 16px;
+#contact .footer-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+#contact .footer-icon a {
+  background-color: #aa906f;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+}
+#contact .footer-icon a:hover {
+  color: #FFF;
+}
+#contact .footer-icon a:hover i {
+  color: black;
 }
 
-form {
-  margin-top: 20px;
+@media (max-width: 500px) {
+  #contact {
+    width: 100%;
+  }
+  .footer-icon a {
+    padding: 5px 5px;
+    font-size: 10px;
+  }
+}
+@media (min-width: 501px) {
+  #contact {
+    width: 80%;
+  }
+  .footer-icon a {
+    padding: 10px 10px;
+    font-size: 14px;
+  }
+}
+.form {
+  margin-bottom: -80px;
 }
 
 @media (min-width: 701px) {
@@ -657,23 +693,6 @@ footer {
 }
 footer p {
   color: black;
-}
-footer .footer-icon {
-  position: absolute;
-  right: calc(50% - 189.5px);
-  bottom: 150%;
-}
-footer .footer-icon a {
-  background-color: black;
-  padding: 10px 10px;
-  border: none;
-  border-radius: 5px;
-  border: #000 2px solid;
-  font-size: 14px;
-  cursor: pointer;
-}
-footer .footer-icon a:hover {
-  color: #FFF;
 }
 
 /*# sourceMappingURL=styles.css.map */
