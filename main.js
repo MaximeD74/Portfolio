@@ -1,10 +1,10 @@
 // Fonction pour afficher la navigation progressivement en fonction du défilement
 
+const aboutSection = document.querySelector('#about');
 
 function afficherNavigation() {
   const nav = document.querySelector('nav');
   const header = document.querySelector('header');
-  const aboutSection = document.querySelector('#about');
 
   const position = window.scrollY;
 
@@ -130,10 +130,11 @@ window.addEventListener('scroll', () => {
     }
   })
 
-  AOS.init({
-    duration: 1200,
-  })
-  
+  // Scroll down
 
+  const arrowDown = document.getElementById('arrowDown').addEventListener("click", scrollDown);
+  console.log(aboutSection)
 
-  
+  function scrollDown() {
+    aboutSection.scrollIntoView();
+  }

@@ -46,21 +46,13 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background-image: url("./design/img/roche.jpg");
+  background-image: url("./design/img/rocheNav.webp");
   background-size: cover;
   padding: 30px 0;
   transition: opacity 0.3s ease;
   border-bottom: 2px solid black;
   z-index: 4;
   opacity: 0;
-}
-nav .navGradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  z-index: 5;
-  margin-top: -30px;
 }
 nav.visible {
   opacity: 1;
@@ -108,7 +100,6 @@ nav ul li {
 }
 /* En-tête */
 .header-container {
-  background-image: url("./design/img/banner.webp");
   background-size: cover;
   background-position: center;
   background-color: black;
@@ -135,20 +126,46 @@ nav ul li {
   left: calc(50% - 25px);
 }
 
-@media (max-width: 900px) {
-  .header-container {
-    height: 50vh;
-  }
-  h2 {
-    top: 17%;
-  }
-}
 @media (min-width: 901px) {
   .header-container {
     height: 100vh;
+    background-image: url("./design/img/banner900+.webp");
   }
-  h2 {
+  .header-container h2 {
     top: 10%;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .header-container {
+    height: 50vh;
+    background-image: url("./design/img/banner900-.webp");
+  }
+  .header-container h2 {
+    top: 17%;
+  }
+}
+@media (max-width: 600px) {
+  .header-container {
+    height: 25vh;
+    background-image: url("./design/img/banner600-.webp");
+    background-size: fill;
+  }
+  .header-container h1 {
+    font-size: 24px;
+  }
+  .header-container h2 {
+    font-size: 16px;
+    top: 10%;
+  }
+}
+@media (min-width: 1px) and (max-width: 350px) {
+  .header-container h2 {
+    left: 50%;
+  }
+}
+@media (min-width: 351px) and (max-width: 600px) {
+  .header-container h2 {
+    left: 60%;
   }
 }
 .typing-animation {
@@ -204,13 +221,15 @@ section h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 0;
+  padding-bottom: 100px;
+  padding-top: 50px;
   width: 100%;
   background-color: #e5e7eb;
   color: black;
 }
 #about h2 {
   margin: 0;
+  padding: 0;
 }
 #about .about-container {
   display: flex;
@@ -229,6 +248,7 @@ section h2 {
 }
 #about .about-container h3 {
   margin-bottom: 20px;
+  margin-top: 30px;
 }
 #about .card {
   max-width: 250px;
@@ -334,7 +354,6 @@ section h2 {
   align-items: center;
   width: 100%;
   padding-bottom: 100px;
-  background-image: url("./design/img/roche.jpg");
   background-size: cover;
   position: relative;
 }
@@ -372,6 +391,16 @@ section h2 {
   transform: translatex(0px);
 }
 
+@media (min-width: 901px) {
+  .skills {
+    background-image: url("./design/img/rocheNav.webp");
+  }
+}
+@media (max-width: 900px) {
+  .skills {
+    background-image: url("./design/img/rocheSkill.webp");
+  }
+}
 .skill {
   background-color: #FFF;
   padding: 10px;
@@ -383,6 +412,10 @@ section h2 {
   font-size: 16px;
   margin-top: 5px;
   color: black;
+}
+.skill img {
+  width: 80px;
+  height: 80px;
 }
 .skill:hover {
   transform: scale(1.05);
@@ -412,6 +445,7 @@ section h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: -70px;
 }
 #portfolio h2 {
   margin-top: 50px;
@@ -532,15 +566,26 @@ section h2 {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  padding: 0 20px;
   width: 100%;
+  position: relative;
 }
 #contact .contactIcons {
-  background-color: #e5e7eb;
+  background-color: #FFF;
+  width: 100%;
+}
+#contact .contactIcons h2 {
+  padding: 0 20px;
+}
+#contact .contactIcons p {
   padding: 0 20px;
 }
 #contact .contactForm {
-  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e7eb;
+  width: 100%;
 }
 #contact .contactForm p {
   margin-top: 50px;
@@ -555,13 +600,10 @@ section h2 {
   gap: 10px;
   margin-bottom: 50px;
 }
-#contact .footer-icon i {
-  color: black;
-}
 #contact .footer-icon a {
-  background-color: #FFF;
+  background-color: black;
   border-radius: 5px;
-  color: black;
+  color: #FFF;
   transition: transform 100ms ease-in-out;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.6);
   cursor: pointer;
@@ -587,10 +629,6 @@ section h2 {
     font-size: 14px;
   }
 }
-.form {
-  margin-bottom: -80px;
-}
-
 @media (min-width: 701px) {
   .big-form {
     display: block;
@@ -620,18 +658,11 @@ footer {
   height: 100px;
   border-top: 1px solid #FFF;
 }
-footer .footer-text p {
+footer p {
   z-index: 6;
   color: #FFF;
-}
-footer .footerGradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-  z-index: 5;
+  text-align: center;
+  margin: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */
