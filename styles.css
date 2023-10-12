@@ -157,6 +157,9 @@ nav ul li {
     font-size: 16px;
     top: 10%;
   }
+  .header-container img {
+    display: none;
+  }
 }
 @media (min-width: 1px) and (max-width: 350px) {
   .header-container h2 {
