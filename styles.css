@@ -155,20 +155,10 @@ nav ul li {
   }
   .header-container h2 {
     font-size: 16px;
-    top: 10%;
+    top: 22%;
   }
   .header-container img {
     display: none;
-  }
-}
-@media (min-width: 1px) and (max-width: 350px) {
-  .header-container h2 {
-    left: 50%;
-  }
-}
-@media (min-width: 351px) and (max-width: 600px) {
-  .header-container h2 {
-    left: 60%;
   }
 }
 .typing-animation {
@@ -590,8 +580,8 @@ section h2 {
   background-color: #e5e7eb;
   width: 100%;
 }
-#contact .contactForm p {
-  margin-top: 50px;
+#contact .contactForm .form {
+  margin-top: 30px;
 }
 #contact p {
   margin-bottom: 20px;
@@ -601,6 +591,7 @@ section h2 {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 #contact .footer-icon a {
@@ -666,6 +657,7 @@ footer p {
   color: #FFF;
   text-align: center;
   margin: 0;
+  padding: 0 20px;
 }
 
 /*# sourceMappingURL=styles.css.map */

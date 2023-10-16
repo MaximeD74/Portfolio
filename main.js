@@ -1,23 +1,32 @@
 // Fonction pour afficher la navigation progressivement en fonction du défilement
 
 const aboutSection = document.querySelector('#about');
+const nav = document.querySelector('nav');
+let navVisible = false;
 
 function afficherNavigation() {
-  const nav = document.querySelector('nav');
   const header = document.querySelector('header');
-
   const position = window.scrollY;
-
-  const navStartAnimationPosition = aboutSection.offsetTop - header.clientHeight / 4 ;
+  const navStartAnimationPosition = aboutSection.offsetTop - header.clientHeight / 4;
 
   if (position >= navStartAnimationPosition) {
-    nav.style.opacity = '1';
+    if (!navVisible) {
+      nav.style.opacity = '1';
+      nav.style.pointerEvents = 'auto';
+      navVisible = true;
+    }
   } else {
-    nav.style.opacity = '0';
+    if (navVisible) {
+      nav.style.opacity = '0';
+      nav.style.pointerEvents = 'none';
+      navVisible = false;
+    }
   }
 
   nav.style.transition = 'opacity 0.3s ease';
 }
+
+nav.style.pointerEvents = 'none';
 
 window.addEventListener('scroll', afficherNavigation);
 
@@ -25,7 +34,7 @@ window.addEventListener('scroll', afficherNavigation);
 
 
 
-// Charger le fichier JSON des compétences
+// Récupérer et afficher les données du fichier JSON des compétences
 
 
 fetch('skills.json')
@@ -54,7 +63,7 @@ fetch('skills.json')
   });
 
 
-  // Charger le fichier JSON des projets
+  // Récupérer et afficher les données du fichier JSON des projets
 
 
   fetch('projects.json')
@@ -95,6 +104,7 @@ fetch('skills.json')
     console.error('Erreur lors du chargement du fichier JSON des compétences :', error);
   });
 
+
 // Animation skill
 
 const skillsContainer = document.querySelector('.skillsContainer')
@@ -110,8 +120,6 @@ window.addEventListener('scroll', () => {
     skillsContainer.classList.add('activeSkills')
   }
 })
-
-
 
 
   // Animation projets 
@@ -130,11 +138,42 @@ window.addEventListener('scroll', () => {
     }
   })
 
-  // Scroll down
+  // Gestion du scroll down avec la flèche
 
   const arrowDown = document.getElementById('arrowDown').addEventListener("click", scrollDown);
   console.log(aboutSection)
 
   function scrollDown() {
-    aboutSection.scrollIntoView();
+    const aboutSectionRect = aboutSection.getBoundingClientRect();
+    const offset = aboutSectionRect.top - 80;
+    
+    window.scrollTo({
+        top: window.scrollY + offset,
+        behavior: 'smooth'
+    });
   }
+
+
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+// Gestion du scroll en appuyant sur les boutons de navigation
+
+
+navLinks.forEach(link => {
+    link.addEventListener('click', scrollToSection);
+});
+
+function scrollToSection(e) {
+    e.preventDefault();
+    const targetId = e.target.getAttribute('href').slice(1);
+    const targetSection = document.getElementById(targetId);
+    const targetSectionRect = targetSection.getBoundingClientRect();
+    const offset = targetSectionRect.top - 50;
+
+    if (targetSection) {
+        scrollTo({
+          top: window.scrollY + offset,
+          behavior: 'smooth'
+        })
+    }
+}

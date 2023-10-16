@@ -71,7 +71,8 @@ nav {
     &:hover {
       color: #FFF;
     }
-}
+  }
+
   ul {
     position: relative;
     display: flex;
@@ -169,7 +170,7 @@ nav {
     }
     h2 {
       font-size: 16px;
-      top: 10%;
+      top: 22%;
     }
     img {
       display: none;
@@ -177,17 +178,9 @@ nav {
   }
 }
 
-@media(min-width: 1px) and (max-width: 350px) {
-  .header-container h2 {
-    left: 50%;
-  }
-}
 
-@media(min-width: 351px) and (max-width: 600px) {
-  .header-container h2 {
-    left:60%;
-  }
-}
+
+
 
 .typing-animation {
   width: 22ch;
@@ -656,8 +649,8 @@ section {
     align-items: center;
     background-color: #e5e7eb;
     width: 100%;
-    p {
-      margin-top: 50px;
+    .form {
+      margin-top: 30px;
     }
   }
   p {
@@ -669,6 +662,7 @@ section {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-top: 30px;
     margin-bottom: 50px;
     
     a {
@@ -741,6 +735,7 @@ footer {
       color: #FFF;
       text-align: center;
       margin: 0;
+      padding: 0 20px;
     } 
 }
 
