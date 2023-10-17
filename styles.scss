@@ -534,13 +534,13 @@ section {
       transform: translateX(20px);
       }
       .projectDescription {
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
         transform: translateY(0px);
       }
       .open-button {
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
-        transition-delay: 1.5s;
+        transition-delay: 0.8s;
       }
     }
 
@@ -554,6 +554,7 @@ section {
 
     h3 {
       transform: translateY(240px);
+      transition: all 1s ease-in-out;
       text-align: left;
       margin-left: 10px;
       font-size: 36px;
@@ -575,6 +576,7 @@ section {
       transition: background-color 0.3s;
       z-index: 4;
       font-size: 10px;
+      transition: opacity 0.5s ease-in-out;
     }
     
     .open-button:hover {
@@ -594,6 +596,7 @@ section {
       margin-left: 10px;
       color: black;
       position: relative;
+      transition: all 1s ease-in-out, transform 1s ease-in-out, opacity 1s ease-in-out;
 
         .descriptionTitle {
           padding-top: 15px;

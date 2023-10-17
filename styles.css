@@ -480,13 +480,13 @@ section h2 {
   transform: translateX(20px);
 }
 #portfolio .project:hover .projectDescription {
-  transition: all 1.5s ease-in-out;
+  transition: all 1s ease-in-out;
   transform: translateY(0px);
 }
 #portfolio .project:hover .open-button {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-  transition-delay: 1.5s;
+  transition-delay: 0.8s;
 }
 #portfolio .project .cardGradient {
   position: absolute;
@@ -497,6 +497,7 @@ section h2 {
 }
 #portfolio .project h3 {
   transform: translateY(240px);
+  transition: all 1s ease-in-out;
   text-align: left;
   margin-left: 10px;
   font-size: 36px;
@@ -517,6 +518,7 @@ section h2 {
   transition: background-color 0.3s;
   z-index: 4;
   font-size: 10px;
+  transition: opacity 0.5s ease-in-out;
 }
 #portfolio .project .open-button:hover {
   background-color: gray;
@@ -534,6 +536,7 @@ section h2 {
   margin-left: 10px;
   color: black;
   position: relative;
+  transition: all 1s ease-in-out, transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 #portfolio .project .projectDescription .descriptionTitle {
   padding-top: 15px;
