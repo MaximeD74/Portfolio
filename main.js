@@ -31,9 +31,6 @@ nav.style.pointerEvents = 'none';
 window.addEventListener('scroll', afficherNavigation);
 
 
-
-
-
 // Récupérer et afficher les données du fichier JSON des compétences
 
 

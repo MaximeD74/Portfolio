@@ -546,12 +546,10 @@ section h2 {
 }
 #portfolio .project .projectDescription h4 {
   padding: 5px 10px 5px 10px;
-  font-size: 12px;
 }
 #portfolio .project .projectDescription p {
   text-align: left;
   padding: 5px 10px 5px 10px;
-  font-size: 10px;
 }
 #portfolio .project .projectDescription .skillsUsed {
   width: 100%;
@@ -572,6 +570,38 @@ section h2 {
   object-fit: cover;
 }
 
+@media (min-width: 1201px) {
+  .projectDescription h4 {
+    font-size: 18px;
+  }
+  .projectDescription p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .projectDescription h4 {
+    font-size: 18px;
+  }
+  .projectDescription p {
+    font-size: 14px;
+  }
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  .projectDescription h4 {
+    font-size: 12px;
+  }
+  .projectDescription p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .projectDescription h4 {
+    font-size: 12px;
+  }
+  .projectDescription p {
+    font-size: 10px;
+  }
+}
 @media (min-width: 901px) {
   .project {
     width: 40%;
