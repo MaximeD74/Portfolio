@@ -58,7 +58,7 @@
     {
         "title" : "Nina Carducci",
         "descriptionTitle" : "Optimisez le référencement d'un site de photographe",
-        "descriptionTexte" : "J'ai optimisé le référencement de ce site grâce à des outils d'audit comme lighthouse et wave. J'ai revu le code HTML, CSS, Javascript et Bootstrap en l'épurant. Le fichier bootstrap a été purgé grâce à PurgeCss puis minifié. J'ai aussi amélioré son référencement local en utilisant des balises meta respectant la charte de Schéma.org et Google Rich Snippet ",
+        "descriptionTexte" : "J'ai optimisé le référencement de ce site grâce à des outils d'audit comme lighthouse et wave. J'ai revu le code HTML, CSS, Javascript et Bootstrap en l'épurant. Le fichier bootstrap a été purgé grâce à PurgeCss puis minifié. J'ai aussi utilisé des balises meta respectant la charte de Schéma.org et Google Rich Snippet ",
         "skillsUsedTitle" : "Compétences utilisées",
         "skillsUsed" : {
             "html" : "./design/icon/html.webp",
