@@ -570,7 +570,7 @@ section h2 {
   object-fit: cover;
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1501px) {
   .projectDescription h4 {
     font-size: 18px;
   }
@@ -586,7 +586,7 @@ section h2 {
     font-size: 14px;
   }
 }
-@media (min-width: 901px) and (max-width: 1200px) {
+@media (min-width: 901px) and (max-width: 1500px) {
   .projectDescription h4 {
     font-size: 12px;
   }
