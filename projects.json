@@ -1,42 +1,87 @@
 [
     {
         "title" : "Booki",
-        "description" : "Apprentissage des bases (HTML/CSS)",
+        "descriptionTitle" : "Créez la page d'accueil d'une agence de voyage avec HTML & CSS",
+        "descriptionTexte" : "L’entreprise souhaite développer un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix. En m'appuyant sur les maquettes figma, j'étais chargé d'intégrer l'interface du site avec du code HTML et CSS",
+        "skillsUsedTitle" : "Compétences utilisées",
+        "skillsUsed" : {
+            "html" : "./design/icon/html.webp",
+            "css" : "./design/icon/css.webp"
+        },
         "cover" : "./design/project/cover/booki.webp",
         "url" : "https://github.com/MaximeD74/Booki",
         "alt" : "Dortoir en bois"
     },
     {
         "title" : "Oh My Food",
-        "description" : "Création d'animations",
+        "descriptionTitle" : "Améliorez l'interface d'un site mobile avec des animations CSS",
+        "descriptionTexte" : "Ma mission était de développer un site “mobile first” qui répertorie les menus de restaurants gastronomiques. Cette fois-ci, j'avais à ma disposition des maquettes et un prototype Figma. 2 missions : créer une application responsive sur tout type d'appareil et ajouter des animations cohérentes",
+        "skillsUsedTitle" : "Compétences utilisées",
+        "skillsUsed" : {
+            "html" : "./design/icon/html.webp",
+            "css" : "./design/icon/css.webp"
+        },
         "cover" : "./design/project/cover/ohmyfood.webp",
         "url" : "https://maximed74.github.io/Oh-My-Food-Project/",
         "alt" : "Plat de poisson et ses légumes"
     },
     {
         "title" : "Sophie Bluel",
-        "description" : "Projet Javascript",
+        "descriptionTitle" : "Créez une page web dynamique avec JavaScript",
+        "descriptionTexte" : "Dans ce projet, je devais présenter les travaux de l'architecte d'intérieur Sophie Bluel sur la page d'accueil en les récupérant depuis une API. Ensuite, j'ai du créer les fonctionnalités de tri par filtre, d'ajout et de suppression des travaux de cette galerie. J'ai aussi créé un système de log-in depuis une page de connexion  ",
+        "skillsUsedTitle" : "Compétences utilisées",
+        "skillsUsed" : {
+            "html" : "./design/icon/html.webp",
+            "css" : "./design/icon/css.webp",
+            "javascript" : "./design/icon/javascript.webp"
+        },
         "cover" : "./design/project/cover/sophieBluel.webp",
         "url" : "https://github.com/MaximeD74/Sophie-Bluel",
         "alt" : "Portrait de Sophie Bluel"
     },
     {
         "title" : "Kasa",
-        "description" : "Projet React",
+        "descriptionTitle" : "Créez une application web de location immobilière avec React",
+        "descriptionTexte" : "Il s'agit d'une refonte totale d'un site statique de location immobilière pour passer à une stack complète en JavaScript avec NodeJS côté back-end, et React côté front-end. J'ai créé ce projet avec Create-react-app et un système de routing avec react-router. Ainsi, j'ai conçu des composants réutilisables sur l'ensemble du site",
+        "skillsUsedTitle" : "Compétences utilisées",
+        "skillsUsed" : {
+            "html" : "./design/icon/html.webp",
+            "css" : "./design/icon/css.webp",
+            "sass" : "./design/icon/sass.webp",
+            "javascript" : "./design/icon/javascript.webp",
+            "react" : "./design/icon/react.webp"
+        },
         "cover" : "./design/project/cover/kasa.webp",
         "url" : "https://github.com/MaximeD74/kasa",
         "alt" : "Appartement moderne"
     },
     {
         "title" : "Nina Carducci",
-        "description" : "SEO",
+        "descriptionTitle" : "Optimisez le référencement d'un site de photographe",
+        "descriptionTexte" : "J'ai optimisé le référencement de ce site grâce à des outils d'audit comme lighthouse et wave. J'ai revu le code HTML, CSS, Javascript et Bootstrap en l'épurant. Le fichier bootstrap a été purgé grâce à PurgeCss puis minifié. J'ai aussi amélioré son référencement local en utilisant des balises meta respectant la charte de Schéma.org et Google Rich Snippet ",
+        "skillsUsedTitle" : "Compétences utilisées",
+        "skillsUsed" : {
+            "html" : "./design/icon/html.webp",
+            "css" : "./design/icon/css.webp",
+            "lighthouse" : "./design/icon/lighthouse.webp",
+            "wave" : "./design/icon/wave.webp"
+        },
         "cover" : "./design/project/cover/nina.webp",
         "url" : "https://maximed74.github.io/Site-portfolio-Nina-Carducci/",
         "alt" : "Portrait de Nina Carducci"
     },
     {
         "title" : "Argent Bank",
-        "description" : "Projet redux",
+        "descriptionTitle" : "Implémentez le front-end d'une application bancaire avec React",
+        "descriptionTexte" : "Argent Bank est une banque en ligne, qui a besoin d'un système d'authentification. L'idée était d'utiliser Redux pour stocker des states dans le store afin de conserver des informations récupérées depuis une API telles que le token, le nom et prénom de l'utilisateur, son pseudo...",
+        "skillsUsedTitle" : "Compétences utilisées",
+        "skillsUsed" : {
+            "html" : "./design/icon/html.webp",
+            "css" : "./design/icon/css.webp",
+            "javascript" : "./design/icon/javascript.webp",
+            "react" : "./design/icon/react.webp",
+            "redux" : "./design/icon/redux.webp"
+        },
         "cover" : "./design/project/cover/argentBank.webp",
         "url" : "https://github.com/MaximeD74/argent-bank",
         "alt" : "Plante dans un verre rempli de pièces de monnaie"

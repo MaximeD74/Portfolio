@@ -72,19 +72,48 @@ fetch('skills.json')
     const projectsContainer = document.querySelector('.projectsContainer');
 
     data.forEach(project => {
-      const projectElement = document.createElement('a');
-      projectElement.target = "_blank";
-      projectElement.href = project.url;
+      const projectElement = document.createElement('div');
       projectElement.classList.add('project');
       
       const title = document.createElement('h3');
       title.textContent = project.title;
       projectElement.appendChild(title);
+
+      const openButton = document.createElement('a');
+      openButton.textContent = 'Ouvrir le projet';
+      openButton.href = project.url;
+      openButton.target = '_blank';
+      openButton.classList.add('open-button');
+      projectElement.appendChild(openButton);
       
-      const description = document.createElement('p');
-      description.textContent = project.description;
-      projectElement.appendChild(description);
+      const descriptionSpace = document.createElement('div');
+      descriptionSpace.classList.add('projectDescription')
+      projectElement.appendChild(descriptionSpace);
+
+      const descriptionTitle = document.createElement('h4');
+      descriptionTitle.textContent = project.descriptionTitle;
+      descriptionTitle.classList.add('descriptionTitle');
+      descriptionSpace.appendChild(descriptionTitle);
+
+      const descriptionTexte = document.createElement('p');
+      descriptionTexte.textContent = project.descriptionTexte;
+      descriptionSpace.appendChild(descriptionTexte);
+
+      const skillsUsedTitle = document.createElement('h4');
+      skillsUsedTitle.textContent = project.skillsUsedTitle;
+      skillsUsedTitle.classList.add('skillsUsedTitle');
+      descriptionSpace.appendChild(skillsUsedTitle);
       
+      const skillsUsed = document.createElement('div');
+skillsUsed.classList.add('skillsUsed'); // Ajoutez une classe pour le style CSS
+descriptionSpace.appendChild(skillsUsed);
+
+for (const skill in project.skillsUsed) {
+  const skillIcon = document.createElement('img');
+  skillIcon.src = project.skillsUsed[skill];
+  skillsUsed.appendChild(skillIcon);
+}
+
       const cover = document.createElement('img');
       cover.src = project.cover;
       cover.alt = project.alt;
